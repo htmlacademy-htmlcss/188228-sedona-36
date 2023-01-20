@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Лейсан Габдрахманова](https://up.htmlacademy.ru/htmlcss/36/user/188228).
-* Наставник: `Наталья Рыжова` (https://htmlacademy.ru/profile/id418965).
+* Наставник: [Наталья Рыжова](https://htmlacademy.ru/profile/id418965).
 
 ---
 

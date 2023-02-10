@@ -12,7 +12,7 @@
       <!--<p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a
         href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p>-->
       <!--Оформление хэдера(шапка)-->
-      <header class="main-header">
+      <header data-test="header" class="main-header">
         <nav class="navigation">
           <a class="navigation-logo" href="index.html">
             <img class="main-header-logo" src="images/additional/logo_sedona.svg" height="70" width="140"
@@ -47,14 +47,14 @@
         </nav>
       </header>
       <!--Оформление главной страницы-->
-      <main class="main-index">
-        <section class="hero">
+      <main data-test="main" class="main-index">
+        <section data-test="hero" class="hero">
           <h1 class="visually-hidden">Welcome Sedona</h1>
           <!-- <img src="images/mountains_background.jpg" width="1200" height="485" alt="Горы.">-->
           <img class="logo" src="images/welcome_sedona.svg" width="458" height="352"
             alt="Приветственный логотип Седоны">
         </section>
-        <section class="advantages">
+        <section data-test="advantages" class="advantages">
           <h2 class="advantages-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
           <p class="advantages-reason">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
           <ul class="advantages-list">
@@ -110,14 +110,14 @@
             </li>
           </ul>
         </section>
-        <section class="search">
+        <section data-test="search" class="search">
           <h2 class="search-title">Заинтересовались?</h2>
           <p class="search-description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения
             гостиниц
             в Седоне</p>
           <a class="button button-basic button-search" href="#">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</a>
         </section>
-        <section class="subscribe-main">
+        <section data-test="subscribe" class="subscribe-main">
           <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
           <p class="subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
@@ -128,7 +128,7 @@
         </section>
       </main>
       <!--Оформление футера(подвал)-->
-      <footer class="page-footer">
+      <footer data-test="footer" class="page-footer">
         <section class="footer-social">
           <h2 class="visually-hidden">Контакты</h2>
           <ul class="footer-social-list">

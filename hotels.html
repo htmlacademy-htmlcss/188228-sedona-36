@@ -10,7 +10,7 @@
     <body>
         <div class="main-container">
             <!--Оформление хэдера(шапка)-->
-            <header class="page-header">
+            <header data-test="header" class="page-header">
                 <nav class="navigation">
                     <a class="navigation-logo" href="index.html">
                         <img class="page-header-logo" src="images/additional/logo_sedona.svg" height="70" width="140"
@@ -44,8 +44,8 @@
                     </ul>
                 </nav>
             </header>
-            <main class="main-inner">
-                <div class="search-header">
+            <main data-test="main" class="main-inner">
+                <div data-test="search" class="search-header">
                     <header class="inner-header">
                         <h1 class="inner-header-title">Гостиницы Седоны</h1>
                         <ul class="breadcrumbs">
@@ -62,7 +62,7 @@
                             </li>
                         </ul>
                     </header>
-                    <section class="search-hotels">
+                    <section data-test="filter" class="search-hotels">
                         <h2 class="visually-hidden">Список гостиниц с фильтрами</h2>
                         <form class="search-filter" action="https://echo.htmlacademy.ru" method="get">
                             <fieldset class="search-filter-group">
@@ -145,7 +145,7 @@
                 <a href="#" class="button button-list">
                     <span class="visually-hidden">Отобразить в виде списка</span>
                 </a>
-                <ul class="hotel-card">
+                <ul data-test="catalog" class="hotel-card">
                     <li class="hotel-card-item">
                         <a class="hotel-card-link" href="#">
                             <img class="hotel-card-image" src="images/hotel_images/hotel_1.jpg" width="300" height="212"
@@ -231,7 +231,7 @@
                     </li>
                 </ul>
                 </section>
-                <section class="subscribe">
+                <section data-test="subscribe" class="subscribe">
                     <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
                     <p class="subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!
                     </p>
@@ -243,7 +243,7 @@
                     </form>
                 </section>
             </main>
-            <footer class="page-footer">
+            <footer data-test="footer" class="page-footer">
                 <section class="footer-social">
                     <h2 class="visually-hidden">Контакты</h2>
                     <ul class="footer-social-list">

@@ -164,14 +164,11 @@ body {
     font-size: 22px;
     line-height: 26px;
 }
-
-.advantages-name {
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 36px;
+.search-description{
+    color:#333333;
 }
 
-.services-name {
+.services-name, .advantages-name {
     font-weight: 700;
     font-size: 24px;
     line-height: 28px;

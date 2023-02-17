@@ -63,6 +63,8 @@ body {
 }
 
 .navigation-user {
+    display: flex;
+    flex-direction: row;
     width: 270px;
     margin-left: auto;
 }
@@ -106,9 +108,21 @@ body {
 }
 
 .hotel-card-more-button {
+    display: flex;
     width: 140px;
     height: 36px;
     background-color: #756157;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.button-favourite {
+    display: flex;
+    width: 140px;
+    height: 36px;
+    padding: 0;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .button-subscribe {
@@ -119,16 +133,18 @@ body {
     line-height: 36px;
     background-color: #82B3D3;
     padding: 0;
+    justify-content: space-around;
     align-items: center;
-    text-align: center;
 }
 
 .button-search {
-    display: block;
+    display: flex;
     width: 376px;
     height: 52px;
     margin: 0 108px;
     text-align: center;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .button-admit {
@@ -166,14 +182,6 @@ body {
     overflow: hidden;
 }
 
-.navigation-link {
-    font-size: 20px;
-    line-height: 24px;
-    color: #000000;
-    background-color: #FFFFFF;
-    text-decoration: none;
-}
-
 .header-button {
     font-size: 16px;
     line-height: 20px;
@@ -197,10 +205,30 @@ body {
     background-color: #D5E3EC;
 }
 
+.navigation-item {
+    display: flex;
+    width: 44px;
+    height: 64px;
+}
+
 .nav-search {
+    display: flex;
     background-image: url("../images/additional/search.svg");
-    background-size: 20px 22px;
+    width: 20px;
+    height: 22px;
     background-repeat: no-repeat;
+}
+
+.navigation-link {
+    width: 20px;
+    height: 22px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+    background-color: #FFFFFF;
+    text-decoration: none;
 }
 
 .nav-favourite {
@@ -222,7 +250,10 @@ body {
     text-transform: uppercase;
     font-size: 30px;
     line-height: 36px;
-    margin: 0 35.5px 20px 35.5px;
+    width: 404px;
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0 140px;
 }
 
 .advantages-title {
@@ -246,7 +277,10 @@ body {
 }
 
 .subscribe-description {
+    width: 475px;
+    padding: 0 104.5px;
     margin: 0;
+    margin-bottom: 54px;
     font-size: 22px;
     line-height: 26px;
 }
@@ -430,10 +464,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.subscribe-text {
-    padding: 96px 362.5px 54px 362.5px;
+    width: 684px;
+    padding: 98px 258px 104px 258px;
 }
 
 .search {
@@ -445,24 +477,33 @@ body {
     text-align: center;
     color: #000000;
     background-color: #FFFFFF;
+    width: 684px;
+    padding: 96px 258px 104px 258px;
 }
 
 .subscribe-form {
     display: flex;
     flex-direction: row;
-    align-items: center;
     width: 684px;
-    padding: 0 258px 104px 258px;
 }
 
 .footer-social-list {
     display: flex;
     flex-direction: row;
     margin: 0;
-    padding: 0;
+    padding: 5px 0;
+}
+
+.footer-social-item {
+    display: flex;
+    width: 48px;
+    height: 40px;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .footer-vk {
+    display: flex;
     width: 24px;
     height: 14px;
     background-size: contain;
@@ -473,6 +514,7 @@ body {
 }
 
 .footer-tm {
+    display: flex;
     width: 18px;
     height: 16px;
     background-size: contain;
@@ -483,6 +525,7 @@ body {
 }
 
 .footer-yt {
+    display: flex;
     width: 22px;
     height: 17px;
     background-image: url("../images/social_icons/youtube.svg");
@@ -513,6 +556,9 @@ body {
 }
 
 .footer-contact-phone {
+    display: flex;
+    width: 332px;
+    padding: 5px 194px 5px 195px;
     text-decoration: none;
     font-size: 40px;
     line-height: 40px;
@@ -520,8 +566,6 @@ body {
     text-transform: uppercase;
     font-style: normal;
     color: #000000;
-    margin: 0 40px;
-    padding: 5px 194px 5px 195px;
 }
 
 .footer-htmlacademy {
@@ -616,10 +660,20 @@ body {
 
 .hotel-card-item {
     width: 340px;
+    padding: 0;
+    border: 1px solid #E6E6E6;
+    margin-right: 20px;
+}
+
+.hotel-card-item:last-child {
+    margin-right: 0;
 }
 
 .hotel-card-link {
+    display: block;
     text-decoration: none;
+    margin: 20px;
+    margin-bottom: 16px;
 }
 
 .hotel-card-title {
@@ -628,14 +682,55 @@ body {
     font-style: normal;
     color: #000000;
     background-color: #FFFFFF;
+    margin: 16px 0;
 }
 
-.hotel-card-type,
-.hotel-card-price {
+.hotel-type-price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 300px;
+    height: 21px;
+    margin: 16px 20px;
+}
+
+.hotel-card-type {
+    display: flex;
     color: #333333;
+    width: 140px;
+    margin: 0;
+}
+
+.hotel-card-price {
+    display: flex;
+    justify-content: flex-end;
+    color: #333333;
+    width: 140px;
+    margin: 0;
+}
+
+.hotel-card-buttons {
+    width: 300px;
+    height: 36px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 16px 0;
+    padding: 0 20px;
+}
+
+.raiting-box {
+    width: 300px;
+    height: 37px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 16px 0;
+    padding: 0 20px;
 }
 
 .hotel-card-raiting-num {
+    display: flex;
     background-color: #F2F2F2;
     color: #333333;
     font-size: 16px;
@@ -644,12 +739,18 @@ body {
     text-transform: uppercase;
     width: 140px;
     height: 37px;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
 }
 
 .hotel-card-raiting {
+    display: flex;
     background-image: url("../images/additional/star.svg");
     background-size: 18px 17px;
     background-repeat: repeat-x;
+    justify-content: space-around;
+    margin: 0;
 }
 
 .one-star {
@@ -685,10 +786,6 @@ input[type="email"] {
     color: #000000;
     border: none;
     padding: 0;
-}
-
-.hotel-card-article {
-    display: block;
 }
 
 .price-input {
@@ -756,7 +853,43 @@ input[type="email"] {
     margin-left: 70px;
 }
 
+.hotel-card {
+    width: 1060px;
+    padding: 0;
+    margin: 0;
+    margin-top: 40px;
+    margin-bottom: 80px;
+    /*на самом деле, 40px до декор.элемента. Пока сделаем 80, потом не забыть исправить*/
+    display: flex;
+    flex-direction: column;
+}
+
+.hotel-card-block {
+    height: 438px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    /*сделаем margin 20, но там, судя по макету, gap*/
+}
+
+.pagination {
+    display: flex;
+    flex-direction: row;
+    width: 1060px;
+    margin: 0;
+    padding: 0;
+}
+
+.pagination-item {
+    width: 60px;
+    height: 60px;
+    margin-right: 8px;
+}
+
 .pagination-link {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     text-decoration: none;
     background-color: #82B3D3;
     color: #FFFFFF;
@@ -791,6 +924,7 @@ input[type="email"] {
     background-color: #FFFFFF;
     padding: 17px 16px;
     box-sizing: content-box;
+    border: 2px solid #000000;
 }
 
 .button-slideshow {
@@ -823,4 +957,13 @@ input[type="email"] {
     border: 2px solid #E5E5E5;
     display: flex;
     justify-content: center;
+    margin-right: 8px;
+}
+
+.button-group:last-child {
+    margin-right: 0;
+}
+
+.nobullet {
+    list-style-type: none;
 }

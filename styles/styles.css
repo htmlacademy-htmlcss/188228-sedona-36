@@ -383,7 +383,7 @@ body {
 .souvenirs {
     background-image: url("../images/additional/souvenir.svg");
     background-size: 64px 76px;
-    background-position: center;
+    background-position: center 81px;
     background-repeat: no-repeat;
     text-align: center;
     display: flex;
@@ -393,7 +393,7 @@ body {
 .home {
     background-image: url("../images/additional/home.svg");
     background-size: 75px 72px;
-    background-position: center;
+    background-position: center 81px;
     background-repeat: no-repeat;
     text-align: center;
     display: flex;
@@ -403,7 +403,7 @@ body {
 .food {
     background-image: url("../images/additional/food.svg");
     background-size: 75px 72px;
-    background-position: center;
+    background-position: center 81px;
     background-repeat: no-repeat;
     text-align: center;
     display: flex;

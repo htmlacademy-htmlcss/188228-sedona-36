@@ -428,6 +428,7 @@ body {
 }
 
 .advantages-reason {
+    color: #333333;
     font-size: 22px;
     line-height: 26px;
     padding-bottom: 69px;
@@ -470,6 +471,10 @@ body {
     text-align: center;
 }
 
+.subscribe-description:not(.description-main) {
+    color: #333333;
+}
+
 .search-description {
     font-size: 22px;
     line-height: 26px;
@@ -506,6 +511,7 @@ body {
 }
 
 .advantages-description {
+    color: #333333;
     margin: 0;
     width: 230px;
 }
@@ -569,6 +575,7 @@ body {
 }
 
 .services-reason {
+    color: #333333;
     margin: 0 auto;
     font-size: 22px;
     line-height: 26px;
@@ -619,6 +626,7 @@ body {
 }
 
 .services-description {
+    color: #333333;
     min-width: 230px;
     margin: 0;
     padding: 0 85px 81px 85px;
@@ -642,13 +650,14 @@ body {
 }
 
 .subscribe-image {
-    background-image: url("../images/Subscribe.jpg");
+    background-image: url("../images/subscribe-background.jpg");
     display: block;
     width: 1200px;
     height: 415px;
     background-repeat: no-repeat;
     background-position: center;
     background-color: #82B3D3;
+    background-size: cover;
     color: #FFFFFF;
 }
 
@@ -957,89 +966,71 @@ body {
 
 .decrease-button {
     cursor: pointer;
-    border: 3px solid transparent;
-    padding: 0 13px;
     border-radius: 4px 0 0 4px;
     box-sizing: border-box;
-    width: 40px;
-    min-height: 48px;
     background-color: rgba(242, 242, 242, 1);
+    border: none;
 }
 
 .decrease-icon {
-    background-image: url("../images/additional/decrease-sign.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 14px;
-    height: 2px;
-}
-
-.decrease-button:hover {
     background-image: url("../images/additional/decrease-black.svg");
     background-repeat: no-repeat;
     background-position: center;
-    width: 14px;
-    height: 2px;
+    width: 20px;
+    height: 20px;
+    margin: 14px 10px;
+    padding: 0;
+    opacity: 0.3;
+}
+
+.decrease-button:hover {
+    opacity: 1;
 }
 
 .decrease-button:focus.decrease-icon {
-    border: 3px solid #82B3D3;
+    outline: 3px solid #82B3D3;
     border-radius: 4px;
-    outline: none;
+    opacity: 1;
 }
 
 .decrease-button:active.decrease-icon {
-    background-image: url("../images/additional/decrease-sign.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 14px;
-    height: 2px;
     outline: none;
-    border: 3px solid transparent;
+    opacity: 0.3;
 }
 
 .increase-button {
     cursor: pointer;
-    padding: 0 13px;
     align-self: center;
     border-radius: 0 4px 4px 0;
     box-sizing: border-box;
-    border: 3px solid transparent;
-    width: 40px;
-    min-height: 48px;
     background-color: rgba(242, 242, 242, 1);
+    border: none;
 }
 
 .increase-icon {
-    background-image: url("../images/additional/increase-sign.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 14px;
-    height: 14px;
-}
-
-.increase-button:hover {
     background-image: url("../images/additional/increase-black.svg");
     background-repeat: no-repeat;
     background-position: center;
-    width: 14px;
-    height: 14px;
+    width: 20px;
+    height: 20px;
+    margin: 14px 10px;
+    padding: 0;
+    opacity: 0.3;
+}
+
+.increase-button:hover {
+    opacity: 1;
 }
 
 .increase-button:focus.increase-icon {
-    border: 3px solid #82B3D3;
+    outline: 3px solid #82B3D3;
     border-radius: 4px;
-    outline: none;
+    opacity: 1;
 }
 
 .increase-button:active.increase-icon {
-    background-image: url("../images/additional/increase-sign.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 14px;
-    height: 14px;
+    opacity: 0.3;
     outline: none;
-    border: 3px solid transparent;
 }
 
 .children-amount {
@@ -1103,6 +1094,10 @@ body {
     margin-left: 10px;
 }
 
+.tooltip:focus {
+    outline: none;
+}
+
 .tooltip-toggle {
     box-sizing: border-box;
     border: none;
@@ -1116,6 +1111,7 @@ body {
 .tooltip-toggle:hover,
 .tooltip-toggle:focus {
     outline-color: #83B3D3;
+    border: none;
 }
 
 .tooltip-icon {
@@ -1132,6 +1128,7 @@ body {
     line-height: 20px;
     font-weight: normal;
     text-transform: none;
+    border: none;
     border-radius: 10px;
     width: 256px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
@@ -1158,8 +1155,11 @@ body {
     margin-right: auto;
 }
 
-.tooltip-toggle:hover + .tooltip-text,
-.tooltip-toggle:focus + .tooltip-text {
+.tooltip-toggle:hover + .tooltip-text {
+    display: block;
+}
+
+.tooltip-toggle:active + .tooltip-text {
     display: block;
 }
 
@@ -1210,6 +1210,7 @@ input[name="price-to"] {
     background-image: url("../images/filter.jpg");
     width: 1200px;
     min-height: 412px;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-color: #82B3D3;
@@ -1352,14 +1353,6 @@ input[name="price-to"] {
     gap: 16px 20px;
 }
 
-/* .hotel-type-price {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 300px;
-    height: 21px;
-} */
-
 .hotel-card-type {
     display: flex;
     color: #333333;
@@ -1463,6 +1456,8 @@ input[type="email"] {
 }
 
 .price-input {
+    font-family: "PT Sans", "Verdana", sans-serif;
+    font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 24px;

@@ -819,6 +819,20 @@ body {
     cursor: pointer;
 }
 
+.modal-close-button:hover {
+    background-color: #E6E6E6;
+}
+
+.modal-close-button:focus {
+    background-color: #E6E6E6;
+    outline: 3px solid #82B3D3;
+}
+
+.modal-close-button:active {
+    outline: none;
+    opacity: 0.3;
+}
+
 .modal-title {
     margin: 0;
     margin-bottom: 64px;
@@ -855,7 +869,7 @@ body {
 }
 
 .booking-date {
-    border: none;
+    border: 2px solid transparent;
     box-sizing: border-box;
     width: 440px;
     background: #F2F2F2;
@@ -865,10 +879,15 @@ body {
     font-weight: 700;
     font-size: 18px;
     line-height: 24px;
+    color: #000000;
     background-image: url("../images/additional/calendar.svg");
     background-repeat: no-repeat;
     background-position: right 20px center;
     cursor: pointer;
+}
+
+.booking-date::placeholder {
+    opacity: 0.6;
 }
 
 .booking-date:not(:placeholder-shown) {
@@ -877,6 +896,24 @@ body {
     font-size: 18px;
     line-height: 24px;
     color: #000000;
+}
+
+.booking-date:hover {
+    background-color: #E6E6E6;
+}
+
+.booking-date:focus {
+    background-color: #E6E6E6;
+    outline: 3px solid #83B3D3;
+    border-radius: 4px;
+    border: 2px solid transparent;
+}
+
+.booking-date:not(:placeholder-shown):focus {
+    background: #F2F2F2;
+    border: 2px solid #000000;
+    border-radius: 4px;
+    outline: none;
 }
 
 .booking-text {
@@ -907,6 +944,14 @@ body {
     width: 31px;
 }
 
+.people-amount:hover {
+    opacity: 0.8;
+}
+
+.people-amount:focus {
+    outline-color: #82B3D3;
+}
+
 .counter-wrapper {
     background-color: rgba(242, 242, 242, 1);
     display: flex;
@@ -914,33 +959,90 @@ body {
 }
 
 .decrease-button {
-    background-image: url("../images/additional/decrease-sign.svg");
-    background-repeat: no-repeat;
-    background-position: center;
     cursor: pointer;
-    border: none;
+    border: 3px solid transparent;
     padding: 0 13px;
-    align-self: center;
     border-radius: 4px 0 0 4px;
-    box-sizing: content-box;
-    width: 14px;
-    height: 2px;
+    box-sizing: border-box;
+    width: 40px;
+    min-height: 48px;
     background-color: rgba(242, 242, 242, 1);
 }
 
-.increase-button {
-    background-image: url("../images/additional/increase-sign.svg");
+.decrease-icon {
+    background-image: url("../images/additional/decrease-sign.svg");
     background-repeat: no-repeat;
     background-position: center;
+    width: 14px;
+    height: 2px;
+}
+
+.decrease-button:hover {
+    background-image: url("../images/additional/decrease-black.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 14px;
+    height: 2px;
+}
+
+.decrease-button:focus.decrease-icon {
+    border: 3px solid #82B3D3;
+    border-radius: 4px;
+    outline: none;
+}
+
+.decrease-button:active.decrease-icon {
+    background-image: url("../images/additional/decrease-sign.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 14px;
+    height: 2px;
+    outline: none;
+    border: 3px solid transparent;
+}
+
+.increase-button {
     cursor: pointer;
-    border: none;
     padding: 0 13px;
     align-self: center;
     border-radius: 0 4px 4px 0;
-    box-sizing: content-box;
+    box-sizing: border-box;
+    border: 3px solid transparent;
+    width: 40px;
+    min-height: 48px;
+    background-color: rgba(242, 242, 242, 1);
+}
+
+.increase-icon {
+    background-image: url("../images/additional/increase-sign.svg");
+    background-repeat: no-repeat;
+    background-position: center;
     width: 14px;
     height: 14px;
-    background-color: rgba(242, 242, 242, 1);
+}
+
+.increase-button:hover {
+    background-image: url("../images/additional/increase-black.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 14px;
+    height: 14px;
+}
+
+.increase-button:focus.increase-icon {
+    border: 3px solid #82B3D3;
+    border-radius: 4px;
+    outline: none;
+}
+
+.increase-button:active.increase-icon {
+    background-image: url("../images/additional/increase-sign.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 14px;
+    height: 14px;
+    outline: none;
+    border: 3px solid transparent;
 }
 
 .children-amount {
@@ -986,6 +1088,17 @@ body {
     cursor: pointer;
 }
 
+.button-booking:hover,
+.button-booking:focus {
+    outline: none;
+    background-color: #68A2CA;
+}
+
+.button-booking:active {
+    background-color: #68A2CA;
+    color: rgba(255, 255, 255, 0.3)
+}
+
 .tooltip {
     position: absolute;
     width: 26px;
@@ -1001,6 +1114,11 @@ body {
     margin: 0;
     display: block;
     padding: 7px 12px;
+}
+
+.tooltip-toggle:hover,
+.tooltip-toggle:focus {
+    outline-color: #83B3D3;
 }
 
 .tooltip-icon {
@@ -1468,9 +1586,9 @@ input[type="email"] {
 
 .control-input[type="radio"] + .control-mark {
     border-radius: 50%;
-  }
+}
 
-  .control-input[type="radio"]:checked + .control-mark::before {
+.control-input[type="radio"]:checked + .control-mark::before {
     position: absolute;
     top: 5px;
     left: 5px;
@@ -1479,17 +1597,26 @@ input[type="email"] {
     background-color: #3F5E72;
     border-radius: 50%;
     content: "";
-  }
+}
 
 .breadcrumbs-item {
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .breadcrumbs-link {
     text-decoration: none;
     font-size: 16px;
     margin-right: 10px;
+}
+
+.breadcrumbs-link:hover {
+    opacity: 0.6;
+}
+
+.breadcrumbs-link:active {
+    opacity: 0.3;
 }
 
 .breadcrumbs-home {

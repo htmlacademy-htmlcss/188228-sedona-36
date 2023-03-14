@@ -214,24 +214,24 @@
           <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
           <form class="booking-form" action="https://echo.htmlacademy.ru/" method="post">
             <section class="booking-block">
-              <p class="field-group group-from">
+              <div class="field-group group-from">
                 <label class="from-date booking-label" for="booking-date-from">Дата Заезда:</label>
-              <div class="booking-wrapper">
-                <input class="booking-date" type="text" id="booking-date-from" name="booking-date-from"
-                  value="27 апреля 2020" placeholder="Укажите дату">
-                <p class="booking-error booking-text">Мы не можем отправить вас в прошлое.</p>
+                <div class="booking-wrapper">
+                  <input class="booking-date" type="text" id="booking-date-from" name="booking-date-from"
+                    value="27 апреля 2020" placeholder="Укажите дату">
+                  <p class="booking-error booking-text">Мы не можем отправить вас в прошлое.</p>
+                </div>
               </div>
-              </p>
             </section>
             <section class="booking-block">
-              <p class="field-group group-to">
+              <div class="field-group group-to">
                 <label class="to-date booking-label" for="booking-date-to">Дата Выезда:</label>
-              <div class="booking-wrapper">
-                <input class="booking-date" type="text" id="booking-date-to" name="booking-date-to"
-                  value="1 сентября 2023" placeholder="Укажите дату">
-                <p class="booking-text">На эти даты есть свободные номера. Пока есть.</p>
+                <div class="booking-wrapper">
+                  <input class="booking-date" type="text" id="booking-date-to" name="booking-date-to"
+                    value="1 сентября 2023" placeholder="Укажите дату">
+                  <p class="booking-text">На эти даты есть свободные номера. Пока есть.</p>
+                </div>
               </div>
-              </p>
             </section>
             <section class="booking-people-amount">
               <div class="field-group group-adults">
@@ -252,14 +252,15 @@
                 <span class="children-amount">
                   <label class="children-amount booking-label" for="children-counter">Дети:
                     <span class="tooltip">
-                      <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-children-amount">
+                      <span class="tooltip-toggle" tabindex="0" aria-labelledby="tooltip-children-amount">
                         <svg class="tooltip-icon" xmlns="http://www.w3.org/2000/svg" width="2" height="12"
                           fill="currentColor" viewBox="0 0 2 12">
                           <path fill="currentColor" fill-rule="evenodd" d="M0 0h2v2H0V0Zm2 12H0V3h2v9Z"
                             clip-rule="evenodd" />
                         </svg>
-                      </button>
-                      <span class="tooltip-text" role="tooltip" id="tooltip-children-amount">Укажите количество детей,
+                      </span>
+                      <span class="tooltip-text" role="tooltip" tabindex="1" id="tooltip-children-amount">Укажите
+                        количество детей,
                         которые будут с вами, возраст которых от 6 до
                         18 лет. Дети до 6 лет размещаются бесплатно.</span>
                     </span>
